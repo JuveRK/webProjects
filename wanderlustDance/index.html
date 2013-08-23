@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wanderlust Dance</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+  <!--body {background-color: #4ea09d;}-->
+    <style type="text/css">
+    body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+      }
+
+   .jumbotron {
+      margin-top: 20px;
+      height:400px;
+      background: url('http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg') center top no-repeat;
+      } 
+  </style>
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Wanderlust Dance</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Gallery</a></li>
+            <li><a href="#contact">Caldendar</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1><em>Wanderlust Dance</em></h1>
+        <p><em>Jordan Colvard</em></p>
+          <!--<img src="http://www.missbuttercup.com/wp-content/uploads/2012/08/wanderlust-1000x666.jpg">
+          <img src="http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg">
+          <img src="http://www.missbuttercup.com/wp-content/uploads/2012/08/wanderlust-1000x666.jpg">
+          <img src="http://farm9.staticflickr.com/8448/8013815960_2366736945_c.jpg">-->
+      </div>
+
+      <div class="row">
+            <div class="col-lg-3 pull-left">
+              <img src="http://placehold.it/200x270" class="img-responsive">
+            </div>
+          <div class="col-lg-9">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+
+        <hr>
+
+        <footer>
+          <p>&copy; Ryan Juve 2013</p>
+        </footer>
+
+    </div> <!-- /container -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <!--<script> 
+      $(window).load(function(){
+    
+      var initialBg =  $('.jumbotron').css("background-image");
+    
+      var firstTime = true;
+      var arr = [initialBg, "url(http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg)", "url(http://farm9.staticflickr.com/8448/8013815960_2366736945_c.jpg)"];
+          (function recurse(counter) {
+              var bgImage = arr[counter];
+              if (firstTime == false) {
+                  $(".jumbotron").fadeOut("slow", function(){
+                      $('.jumbotron').css('background-image', bgImage);
+                  });
+                  $(".jumbotron").fadeIn("slow");
+              } else {
+                  firstTime = false;
+              }               
+              delete arr[counter];
+              arr.push(bgImage);
+              setTimeout(function() {
+                  recurse(counter + 1);
+              }, 3600);
+            })(0);      
+        });
+        
+    </script>-->
+
+  </body>
+</html>
