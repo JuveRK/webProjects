@@ -6,12 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>YouTube API Project - JuveRK's Code Vault</title>
+    <title>googlemaps API Project - JuveRK's Code Vault</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- local css -->
-    <link rel="stylesheet" href="youtubeAPI.css">
+    <link rel="stylesheet" href="gmapsAPI.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
@@ -19,10 +19,6 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="youtubeAPI.js"></script>
-    <script src="https://apis.google.com/js/client:plusone.js?onload=load"></script>
   </head>
 
   <body>
@@ -43,7 +39,7 @@
               <ul class="dropdown-menu">
                 <li><a href="#">Wanderlust Dance</a></li>
                 <li><a href="#">Bootstrap-Tac-Toe</a></li>
-                <li><a href="#">YouTube API Project</a></li>
+                <li><a href="#">Google Maps API Project</a></li>
               </ul>
             </li>
             <li><a href="#contact">Contact</a></li>
@@ -55,9 +51,14 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-12 col-lg-12" style="height:600px;">
-          <h3>As-Yet-Unnamed YouTube API Project!</h3>
-          <p>for the purpose of learning google's youtube API and APIs in general...</p>
-          <br><span id="#search-container"></span>        
+          <h3>As-Yet-Unnamed Google Map API Project!</h3>
+          <p>for the purpose of learning google's map API and APIs in general...</p>
+          <br>
+          <div id="panel">
+          <input id="address" type="textbox" value="Sydney, NSW">
+          <input type="button" value="Geocode" onclick="codeAddress()">
+          </div>
+          <div id="map-canvas" style="height: 400px"></div>      
         </div>
       </div>
     </div>
@@ -71,5 +72,10 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="gmapsAPI.js"></script>
+
   </body>
 </html>

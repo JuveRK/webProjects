@@ -1,0 +1,130 @@
+body {
+	padding-top: 90px;
+	padding-bottom:20px;
+	background-color:#191919;
+	box-shadow: 0 0 50px #000 inset;
+	/*background:url("seamless/fzm-canvas.texture-03-[800x791].jpg");*/
+}
+.tbl {
+	color: white;
+	background-color: #204B4B;
+}
+td a {
+	color:black;
+}
+.show {
+	background-color:white;
+}
+.navbar {
+	height: 70px;
+	background-color: transparent;
+	background-image:url("mapBar.jpg");
+	background-position:center;
+	box-shadow: 0px 0px 60px 20px black inset;
+}
+
+.navbar-brand {
+	padding-left: 0px;
+}
+
+.nav-collapse {
+	background: black;
+}
+
+.navbar-toggle:focus {
+	background: transparent;
+}
+.nav-collapse ul li:first-child {
+	margin-left: 0px;
+}
+.navbar-nav li {
+}
+
+.navbar-nav li .active {
+	/* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.navbar-nav li a {
+	font-size: 1.5em;
+	font-family: "monaco";
+	color: white;
+	margin-top: 15px;
+	margin-left: 10px;
+    box-shadow: 0px 0px 15px #000;
+    border-radius: 10px;
+}
+
+.navbar-nav li a:focus {
+	 /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.65);
+	color: white;
+
+}
+.navbar-nav li a:hover {
+	background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.65);
+	color: white;
+}
+
+.navbar-nav li:first-child {
+	margin-left: 25px;
+}
+
+.navbar-brand, .navbar-nav li a {
+}
+
+.tab-pane div {
+	margin-top: 30px;
+}
+
+#bioCard {
+	background:#ddd;
+	padding: 15px;
+	border-radius: 5px;
+}
+#blogBox {
+	background: #eee;
+	border-radius: 5px;
+	padding-top:15px;
+	margin-left: 20px;
+	box-shadow: 5px 5px 10px black;
+}
+
+
+/*.box:before, .box:after
+{
+	margin-top: 50px;
+	position: absolute;
+	width: 40%;
+	height: 10px;
+	content: ' ';
+	left: 12px;
+	bottom: 12px;
+	background: transparent;
+	-webkit-transform: skew(-5deg) rotate(-5deg);
+	-moz-transform: skew(-5deg) rotate(-5deg);
+	-ms-transform: skew(-5deg) rotate(-5deg);
+	-o-transform: skew(-5deg) rotate(-5deg);
+	transform: skew(-5deg) rotate(-5deg);
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
+	z-index: 1;
+} 
+
+.box:after
+{
+	left: auto;
+	right: 12px;
+	-webkit-transform: skew(5deg) rotate(5deg);
+	-moz-transform: skew(5deg) rotate(5deg);
+	-ms-transform: skew(5deg) rotate(5deg);
+	-o-transform: skew(5deg) rotate(5deg);
+	transform: skew(5deg) rotate(5deg);
+}*/

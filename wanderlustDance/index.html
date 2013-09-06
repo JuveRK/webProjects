@@ -1,129 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <title>Wanderlust Dance</title>
+	<title>Wanderlust Dance</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
-  <!--body {background-color: #4ea09d;}-->
-    <style type="text/css">
-    body {
-      padding-top: 50px;
-      padding-bottom: 20px;
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+  <style type="text/css">
+
+  	.jumbotron {
+  		position: relative;
+  		display: block;
+   		padding: 0px;
+      margin-top: 0px;
+      height:400px;
+      background: black;
+      border: 2px solid black;
+      box-shadow: 5px 5px 8px 0px black;
+      overflow: hidden;
+      z-index: -1;
       }
 
-   .jumbotron {
-      margin-top: 20px;
-      height:400px;
-      background: url('http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg') center top no-repeat;
-      } 
+ 		@media screen and (max-width : 480px) {
+ 			.jumbotron {
+ 				height:200px;
+ 			}
+ 		}
+    
+    #fade1 {
+    	width: 100%;
+    	z-index: -1;
+    	position:absolute;
+    	display: block;
+    	opacity: 1;
+		  /*-webkit-transition: opacity 1s ease-in-out;
+		  -moz-transition: opacity 1s ease-in-out;
+		  -o-transition: opacity 1s ease-in-out;
+		  transition: opacity 1s ease-in-out;*/
+    }
+
+    #fade2, #fade3 {
+    	width: 100%;
+    	z-index: -1;
+    	position:absolute;
+    	display: block;
+    	opacity: 0;
+		  /*-webkit-transition: opacity 1s ease-in-out;
+		  -moz-transition: opacity 1s ease-in-out;
+		  -o-transition: opacity 1s ease-in-out;
+		  transition: opacity 1s ease-in-out;*/
+    }
   </style>
 
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
-  </head>
+	<!-- Favicons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
+</head>
 
-  <body>
+<body>
+	<script type="text/x-handlebars">
+	<div class="navbar navbar-fixed-top">
+		<div class="container">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="WLDsmall.png" class="image-responsive"/></a>
+			<div class="nav-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>{{#linkTo 'index'}}Home{{/linkTo}}</li>
+					<li>{{#linkTo 'gallery'}}Gallery{{/linkTo}}</li>
+					<li>{{#linkTo 'shows'}}Upcoming Shows{{/linkTo}}</li>
+					<li>{{#linkTo 'contact'}}Contact{{/linkTo}}</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+	{{outlet}}
+	</script>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Wanderlust Dance</a>
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Gallery</a></li>
-            <li><a href="#contact">Caldendar</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+	<script type="text/x-handlebars" id="shows">
+		<div class="container">
+			<div class="row">
+				<div class="col-3 col-sm-3 col-lg-3 tbl">
+						<h4>Upcoming Shows</h4>
+						<hr>
+						{{#each model}}
+							<div class="row"><div class="col-12">
+								{{#linkTo 'show' this}}{{title}}<br>{{dateHelper date}}{{/linkTo}}
+							</div></div><br>
+						{{/each}} 
+					</table> 
+				</div>     
+				<div class="col-9 col-sm-9 col-lg-9 show">
+				{{outlet}}
+				</div>
+			</div>
+			<hr>
+
+      <footer>
+        <p><small>&copy; Ryan Juve 2013</small></p>
+      </footer>
+		</div> <!-- /container -->
+	</script>
+
+	<script type="text/x-handlebars" id="show">
+		<h1>{{title}} <small>by {{choreographer}}</small></h1>
+		<h2>{{dateHelper date}} at {{placeName}}</h2>
+		<p>{{info}}</p>
+		<iframe width="600" height="350" frameborder="10" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=l&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=velocity+dance+center&amp;aq=&amp;sll=47.558607,-122.299016&amp;sspn=0.253465,0.793076&amp;t=h&amp;ie=UTF8&amp;hq=velocity+dance+center&amp;hnear=&amp;ll=47.558607,-122.299016&amp;spn=0.253465,0.793076&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=velocity+dance+center&amp;aq=&amp;sll=47.558607,-122.299016&amp;sspn=0.253465,0.793076&amp;t=h&amp;ie=UTF8&amp;hq=velocity+dance+center&amp;hnear=&amp;ll=47.558607,-122.299016&amp;spn=0.253465,0.793076" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	</script>
+
+	<script type="text/x-handlebars" id="index">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+    	<img src="http://www.missbuttercup.com/wp-content/uploads/2012/08/wanderlust-1000x666.jpg" id="fade1" class="img-responsive"/>
+      <img src="http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg" id="fade2" class="img-responsive"/>
+      <img src="http://farm9.staticflickr.com/8448/8013815960_2366736945_c.jpg" id="fade3" class="img-responsive"/>
+      <div style="margin: 35px">
+      <img src="WLDbig.png" class="img-responsive" style="z-index:5"/>
+      <p class="text-muted"><em>Jordan Colvard</em></p>
       </div>
     </div>
 
-    <div class="container">
+ 		<div class="container">
+		  <div class="row">
+	      <div class="col-12 col-lg-3" id="bioCard">
+	        <img src="http://placehold.it/200x270" class="img-responsive">
+        	<h4>Jordan Colvard</h4>
+	        <h5>BFA, Cornish College of The Arts</h5>
+	      </div>
+	      <div class="col-12 col-sm-12 col-lg-8" id="blogBox">
+	      {{#each model}}
+	      	<div class="row">
+	      		<div class="col-12 col-sm-12 col-lg-12 blogPost">
+		      		<img src="http://img.stockfresh.com/files/j/janpietruszka/x/78/1745001_62648794.jpg"/><h3 style="display:inline; margin-left:20px">{{title}}</h3>
+		      		<h5><class="text-muted"><small>Posted on {{dateHelper postedTime}} by {{submitter}}</small></h5>
+		      		<p>{{content}}</p>
+		      		<hr>
+	      		</div>
+	      	</div>
+	      {{/each}}
+	      </div>
+		  </div>
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1><em>Wanderlust Dance</em></h1>
-        <p><em>Jordan Colvard</em></p>
-          <!--<img src="http://www.missbuttercup.com/wp-content/uploads/2012/08/wanderlust-1000x666.jpg">
-          <img src="http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg">
-          <img src="http://www.missbuttercup.com/wp-content/uploads/2012/08/wanderlust-1000x666.jpg">
-          <img src="http://farm9.staticflickr.com/8448/8013815960_2366736945_c.jpg">-->
+      <hr>
+
+      <footer>
+        <p><small>&copy; Ryan Juve 2013</small></p>
+      </footer>
+
+		</div>
+	</script>
+
+	<script type="text/x-handlebars" id="gallery">
+		<div class="container">
+		<div class="row">
+			<div class="col-3 col-sm-2 col-lg-2">   	
+				<ul class="nav nav-tabs nav-stacked" id="tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">gallery 1</a></li>
+					<li><a href="#tab2" data-toggle="tab">gallery 2</a></li>
+					<li><a href="#tab3" data-toggle="tab">gallery 3</a></li>
+					<li><a href="#tab4" data-toggle="tab">gallery 4</a></li>
+				</ul>
+			</div>
+			<div class="col-9 col-sm-10 col-lg-10">
+				<div class="row"> 	
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab1">
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab2">
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab3">
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-6">
+								<a href="#" class="thumbnail"><img src="http://placehold.it/300x200" class="img-responsive"></a>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab4">
+							<iframe src="http://player.vimeo.com/video/62086020" width="800" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/62086020">THIS IS VELOCITY</a> from <a href="http://vimeo.com/velocitydance">VelocityDanceCenter</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<hr>
+    <footer>
+      <p><small>&copy; Ryan Juve 2013</small></p>
+    </footer>
+		</div> <!-- /container --> 
+	</script>
+
+	<script type="text/x-handlebars" id="contact">
+			<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-lg-12">
+					<h2>Jordan Colvard</h2>
+				</div>
+			</div>
+			<hr>
+      <footer>
+        <p><small>&copy; Ryan Juve 2013</small></p>
+      </footer>
       </div>
+	</script>
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
 
-      <div class="row">
-            <div class="col-lg-3 pull-left">
-              <img src="http://placehold.it/200x270" class="img-responsive">
-            </div>
-          <div class="col-lg-9">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
-
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      </div>
-
-        <hr>
-
-        <footer>
-          <p>&copy; Ryan Juve 2013</p>
-        </footer>
-
-    </div> <!-- /container -->
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-    <!--<script> 
-      $(window).load(function(){
-    
-      var initialBg =  $('.jumbotron').css("background-image");
-    
-      var firstTime = true;
-      var arr = [initialBg, "url(http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg)", "url(http://farm9.staticflickr.com/8448/8013815960_2366736945_c.jpg)"];
-          (function recurse(counter) {
-              var bgImage = arr[counter];
-              if (firstTime == false) {
-                  $(".jumbotron").fadeOut("slow", function(){
-                      $('.jumbotron').css('background-image', bgImage);
-                  });
-                  $(".jumbotron").fadeIn("slow");
-              } else {
-                  firstTime = false;
-              }               
-              delete arr[counter];
-              arr.push(bgImage);
-              setTimeout(function() {
-                  recurse(counter + 1);
-              }, 3600);
-            })(0);      
-        });
-        
-    </script>-->
-
-  </body>
+		<script src="jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="handlebars-1.0.0.js"></script>
+		<script type="text/javascript" src="ember-1.0.0-rc.7.js"></script>
+		<script type="text/javascript" src="ember-data.js"></script>
+		<script type="text/javascript" src="moment.js"></script>
+ 		<script type="text/javascript" src="calendar.js"></script>
+	</body>
 </html>
