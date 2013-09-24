@@ -11,7 +11,7 @@
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
-
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
   <style type="text/css">
 
   	.jumbotron {
@@ -22,7 +22,7 @@
       height:400px;
       background: black;
       border: 2px solid black;
-      box-shadow: 5px 5px 8px 0px black;
+      box-shadow: 0px 0px 8px 0px black;
       overflow: hidden;
       z-index: -1;
       }
@@ -93,15 +93,16 @@
 	<script type="text/x-handlebars" id="shows">
 		<div class="container">
 			<div class="row">
-				<div class="col-3 col-sm-3 col-lg-3 tbl">
-						<h4>Upcoming Shows</h4>
-						<hr>
-						{{#each model}}
-							<div class="row"><div class="col-12">
-								{{#linkTo 'show' this}}{{title}}<br>{{dateHelper date}}{{/linkTo}}
-							</div></div><br>
-						{{/each}} 
-					</table> 
+				<div class="col-2 col-sm-2 col-lg-2 tbl" id="showsbox">
+					<h3>Upcoming Shows</h3>
+					<hr>
+					<ul>
+					{{#each model}}
+						<li>
+							{{#linkTo 'show' this}}{{title}}<br>{{dateHelper date}}{{/linkTo}}
+						</li>
+					{{/each}} 
+					</ul> 
 				</div>     
 				<div class="col-9 col-sm-9 col-lg-9 show">
 				{{outlet}}
@@ -119,37 +120,37 @@
 		<h1>{{title}} <small>by {{choreographer}}</small></h1>
 		<h2>{{dateHelper date}} at {{placeName}}</h2>
 		<p>{{info}}</p>
-		<iframe width="600" height="350" frameborder="10" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=l&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=velocity+dance+center&amp;aq=&amp;sll=47.558607,-122.299016&amp;sspn=0.253465,0.793076&amp;t=h&amp;ie=UTF8&amp;hq=velocity+dance+center&amp;hnear=&amp;ll=47.558607,-122.299016&amp;spn=0.253465,0.793076&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=velocity+dance+center&amp;aq=&amp;sll=47.558607,-122.299016&amp;sspn=0.253465,0.793076&amp;t=h&amp;ie=UTF8&amp;hq=velocity+dance+center&amp;hnear=&amp;ll=47.558607,-122.299016&amp;spn=0.253465,0.793076" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+		{{mapMaker address placeName}}
 	</script>
 
 	<script type="text/x-handlebars" id="index">
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-    	<img src="http://www.missbuttercup.com/wp-content/uploads/2012/08/wanderlust-1000x666.jpg" id="fade1" class="img-responsive"/>
-      <img src="http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg" id="fade2" class="img-responsive"/>
-      <img src="http://farm9.staticflickr.com/8448/8013815960_2366736945_c.jpg" id="fade3" class="img-responsive"/>
-      <div style="margin: 35px">
-      <img src="WLDbig.png" class="img-responsive" style="z-index:5"/>
-      <p class="text-muted"><em>Jordan Colvard</em></p>
-      </div>
-    </div>
+  	<div class="container">
 
- 		<div class="container">
+  		<div class="jumbotron">
+  			<img src="http://www.missbuttercup.com/wp-content/uploads/2012/08/wanderlust-1000x666.jpg" id="fade1" class="img-responsive"/>
+	      <img src="http://24.media.tumblr.com/8e0f09f52ddab11fe6cdede22938fe25/tumblr_mkfu56v2KE1rih1y4o1_1280.jpg" id="fade2" class="img-responsive"/>
+	      <img src="http://farm9.staticflickr.com/8448/8013815960_2366736945_c.jpg" id="fade3" class="img-responsive"/>
+    		<div style="margin: 35px">
+    			<img src="WLDbig.png" class="img-responsive" style="z-index:5"/>
+    			<p class="text-muted"><em>Jordan Colvard</em></p>
+    		</div>
+ 			</div>
+ 		
 		  <div class="row">
 	      <div class="col-12 col-lg-3" id="bioCard">
-	        <img src="http://placehold.it/200x270" class="img-responsive">
+	        <img src="headshot.jpg" class="img-responsive">
         	<h4>Jordan Colvard</h4>
-	        <h5>BFA, Cornish College of The Arts</h5>
+	        <h5><em>freelance dancer, choreographer, and dance/fitness instructor<br><small>BFA in Dance, Cornish College of the Arts</small></em></h5>
 	      </div>
-	      <div class="col-12 col-sm-12 col-lg-8" id="blogBox">
+	      <div class="col-12 col-sm-12 col-lg-9" id="blogBox">
 	      {{#each model}}
 	      	<div class="row">
 	      		<div class="col-12 col-sm-12 col-lg-12 blogPost">
-		      		<img src="http://img.stockfresh.com/files/j/janpietruszka/x/78/1745001_62648794.jpg"/><h3 style="display:inline; margin-left:20px">{{title}}</h3>
+		      		<img src="http://img.stockfresh.com/files/j/janpietruszka/x/78/1745001_62648794.jpg" style="float: left"/><h3>{{title}}</h3>
 		      		<h5><class="text-muted"><small>Posted on {{dateHelper postedTime}} by {{submitter}}</small></h5>
 		      		<p>{{content}}</p>
-		      		<hr>
+		      		<hr><br>
 	      		</div>
 	      	</div>
 	      {{/each}}

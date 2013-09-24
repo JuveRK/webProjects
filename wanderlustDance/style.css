@@ -5,22 +5,15 @@ body {
 	box-shadow: 0 0 50px #000 inset;
 	/*background:url("seamless/fzm-canvas.texture-03-[800x791].jpg");*/
 }
-.tbl {
-	color: white;
-	background-color: #204B4B;
-}
-td a {
-	color:black;
-}
-.show {
-	background-color:white;
+h3, h4 {
+	font-family: 'Special Elite'
 }
 .navbar {
 	height: 70px;
 	background-color: transparent;
 	background-image:url("mapBar.jpg");
 	background-position:center;
-	box-shadow: 0px 0px 60px 20px black inset;
+	box-shadow: 0px 0px 60px 10px black inset;
 }
 
 .navbar-brand {
@@ -44,16 +37,19 @@ td a {
 	/* Fallback for web browsers that don't support RGBa */
     background-color: rgb(0, 0, 0);
     /* RGBa with 0.6 opacity */
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .navbar-nav li a {
-	font-size: 1.5em;
-	font-family: "monaco";
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 1.2em;
+	font-family: 'Special Elite';
 	color: white;
 	margin-top: 15px;
 	margin-left: 10px;
+	padding:11px;
     box-shadow: 0px 0px 15px #000;
+    border: 1px solid black;
     border-radius: 10px;
 }
 
@@ -61,14 +57,14 @@ td a {
 	 /* Fallback for web browsers that don't support RGBa */
     background-color: rgb(0, 0, 0);
     /* RGBa with 0.6 opacity */
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.7);
 	color: white;
 
 }
 .navbar-nav li a:hover {
 	background-color: rgb(0, 0, 0);
     /* RGBa with 0.6 opacity */
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.7);
 	color: white;
 }
 
@@ -84,18 +80,81 @@ td a {
 }
 
 #bioCard {
-	background:#ddd;
+	background: #E9E3DC;
 	padding: 15px;
 	border-radius: 5px;
 }
 #blogBox {
-	background: #eee;
+	width: 73%;
+	background: #E9E3DC;
 	border-radius: 5px;
 	padding-top:15px;
 	margin-left: 20px;
+	margin-right: -2%;
 	box-shadow: 5px 5px 10px black;
 }
 
+.blogPost hr {
+	border-color: black;
+}
+.blogPost p {
+	margin-top: 20px;
+	text-indent: 20px;
+}
+.blogPost h3, .blogPost h5 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 70px;
+}
+.show {
+	width: 80%;
+	margin-left: 3%;
+	background-color:#E9E3DC;
+	border-radius: 5px;
+	box-shadow: 3px 3px 15px black;
+}
+#showsbox{
+	background: #E9E3DC;
+}
+#showsbox h3 {
+	color: black;
+	margin-bottom: 2px;
+}
+#showsbox ul {
+	padding-left: 0px;
+}
+#showsbox hr {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-color: black;
+}
+.tbl {
+	color: white;
+	background-color: #204B4B;
+	border-radius: 5px;
+	box-shadow: 3px 3px 15px black;
+}
+td a {
+	color:black;
+}
+
+
+.iframe-rwd  {
+position: relative;
+padding-bottom: 65.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+.iframe-rwd iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+/* GALLERY */
 
 /*.box:before, .box:after
 {

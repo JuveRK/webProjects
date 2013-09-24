@@ -1,38 +1,131 @@
 .navbar {
-	min-height: 80px;
-	background:url("shirtbanner.png");
-
-
+	min-height: 60px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	padding-top: 20px;
+	background: url(banner.png);
+	background-repeat: no-repeat;
 }
-.navbar-brand, .navbar-nav li a {
-	height: 60px;
-	padding-top: 25px;
-	color:rgb(200, 200, 200);
+.navbar-toggle {
+	background-color: #CC5B00;
+}
+.in>ul {
+	background-color: #CC5B00;
+	margin-top: 20px;
+}
+.navbar-nav li a {
+	font-family: 'Ubuntu', sans-serif;
+	height: 30px;
+	font-size: 1.2em;
+	margin-top: 5px;
+	margin-left: 25px;
+	margin-right: 0px;
+	padding: 2px;
+	padding-top:3px;
+	padding-bottom: 0px;
+	border-radius: 3px 3px 0px 0px;
+	color: #fff;	
+	background-color: transparent;
+	vertical-align: middle;
+}
+.navbar-nav li a:hover, .navbar-nav li a:focus {
+	background-color: transparent;
+	color: white;
+}
+.navbar-nav > .active > a, .navbar-nav > .active > a:hover,.navbar-nav > .active > a:focus{
+	background-color: transparent;
+	color: black;
 }
 
-.navbar-inverse .navbar-brand {
-  color:rgb(200, 200, 200);
+.navbar-brand {
+	max-width: 106px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.4em;
+	color: white;
+	padding: 0px;
+	margin-left: 5px
 }
 
-.navbar-inverse .navbar-nav > li > a {
-	color:rgb(200, 200, 200);
+.navbar-brand:hover, .navbar-brand:focus {
+	color: white;
 }
 
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-  color:rgb(200, 200, 200);
-  background-color: transparent;
+.navbar-nav>.open> a, .navbar-nav>.open> a:focus, .navbar-nav>.open> a:hover {
+	background-color: rgba(0,0,0,0.3);
+	color: white;
 }
-
+.dropdown-menu {
+	background-color: #CC5B00;
+}
+.dropdown-menu>li>a {
+	margin-left: 0px;
+	font-size: 1em;
+}
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {
+	background-image: none;
+	background-color: black;
+}
 .img-responsive .carousel {
 	height:400px;
 }
+#bio {
+	background-color: #E3AB7E;
+	border-radius: 2px;
+	margin-left: 3%;
+	padding: 15px;
+}
 
-.postbox {
-	background-color: #DDDDDD;
-	border-radius: 10px;
+#postBox {
+	margin-left: 2%;
+	width: 67%;
+}
+.post {
+ 	border: 1px solid #E3AB7E;
+	border-radius: 2px;
 	margin-top:10px;
 	margin-bottom:10px;
+}
+
+.carousel-control {
+	opacity: 1;
+	width: 33%;
+	height: 50%; 
+	top: 50%;
+	transition: top 1s;
+	-webkit-transition: top 1s;
+}
+.carousel-control:hover {
+	opacity: 1;
+	top: 49%;
+}
+
+.carousel-control:focus {
+	opacity: 1;
+}
+.carousel-control:hover>img {
+}
+.carousel-control.right {
+	background-image: none;
+}
+
+.carousel-control.left {
+background-image: none;
+}
+
+
+.carousel-control .icon-prev{
+	margin: 0px;
+	left: 5%;
+	bottom: 5%;
+
+}
+
+.carousel-control .icon-next{
+	margin: 0px;
+	left: 80%;
+	bottom: 5%;
+
+
 }
 
 html{
@@ -40,5 +133,10 @@ html{
 }
 
 body{
-	background-color: #000;
+	background-color: #FFF;
+}
+
+.container {
+	box-shadow: 2px 2px 15px 0px #111;
+	padding-top: 80px;
 }
