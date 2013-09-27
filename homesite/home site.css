@@ -65,14 +65,12 @@
 	background-image: none;
 	background-color: black;
 }
-.img-responsive .carousel {
-	height:400px;
-}
 #bio {
-	background-color: #E3AB7E;
+	background-color: #04677E;
 	border-radius: 2px;
 	margin-left: 3%;
 	padding: 15px;
+	box-shadow: 2px 3px 1px 1px black
 }
 
 #postBox {
@@ -80,15 +78,42 @@
 	width: 67%;
 }
 .post {
- 	border: 1px solid #E3AB7E;
+ 	border: 3px solid #008466;
 	border-radius: 2px;
 	margin-top:10px;
 	margin-bottom:10px;
+		box-shadow: 2px 2px 1px 0px black
 }
-
+#carFade {
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	height: 80px;
+	z-index: 5;
+	background: -moz-radial-gradient(bottom center, ellipse cover,  rgba(20,20,20,1) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	
+}
+.item img {
+	height:400px;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	padding:20px;
+	z-index: 10;
+}
+.carousel-caption {
+	text-shadow: 1px 1px 4px black;
+	font-size: 1.5em
+}
+.carousel-indicators>li{
+	background-color: black;
+	color: black;
+	border-color: black;
+}
 .carousel-control {
+	z-index: 11;
 	opacity: 1;
-	width: 33%;
+	width: 10%;
 	height: 50%; 
 	top: 50%;
 	transition: top 1s;
@@ -98,43 +123,34 @@
 	opacity: 1;
 	top: 49%;
 }
-
 .carousel-control:focus {
 	opacity: 1;
 }
-.carousel-control:hover>img {
-}
-.carousel-control.right {
+
+.carousel-control.left, .carousel-control.right {
 	background-image: none;
 }
 
-.carousel-control.left {
-background-image: none;
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Ubuntu', sans-serif;
 }
-
-
-.carousel-control .icon-prev{
-	margin: 0px;
-	left: 5%;
-	bottom: 5%;
-
+#bio>a:link, #bio>a:hover {
+	color: #ddd;
 }
-
-.carousel-control .icon-next{
-	margin: 0px;
-	left: 80%;
-	bottom: 5%;
-
-
-}
-
 html{
 
 }
 
 body{
 	background-color: #FFF;
+	color: rgb(20,20,20);
 }
+
+hr {
+	margin: 0px 10px 10px 10px;
+	border-color: black;
+}
+
 
 .container {
 	box-shadow: 2px 2px 15px 0px #111;
