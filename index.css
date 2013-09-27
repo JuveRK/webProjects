@@ -43,7 +43,7 @@
 .navbar-brand {
 	max-width: 106px;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	color: white;
 	padding: 0px;
 	margin-left: 5px
@@ -97,7 +97,8 @@
 	height: 80px;
 	z-index: 5;
 	background: -moz-radial-gradient(bottom center, ellipse cover,  rgba(20,20,20,1) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-	
+	background: -webkit-gradient(radial, bottom center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,1)), color-stop(65%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(bottom center, ellipse cover, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 65%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
 }
 .item a img {
 	height:400px;
