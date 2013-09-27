@@ -6,6 +6,9 @@
 	background: url(banner.png);
 	background-repeat: no-repeat;
 }
+.nav-collapse.in {
+	background-color: #CC5B00
+}
 .navbar-toggle {
 	background-color: #CC5B00;
 }
@@ -72,6 +75,9 @@
 	padding: 15px;
 	box-shadow: 2px 3px 1px 1px black
 }
+.visible-sm>#bio {
+	margin-left: 0%;
+}
 
 #postBox {
 	margin-left: 2%;
@@ -93,12 +99,12 @@
 	background: -moz-radial-gradient(bottom center, ellipse cover,  rgba(20,20,20,1) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0) 100%); /* FF3.6+ */
 	
 }
-.item img {
+.item a img {
 	height:400px;
 	display: block;
 	margin-left:auto;
 	margin-right:auto;
-	padding:20px;
+	padding:10px;
 	z-index: 10;
 }
 .carousel-caption {
