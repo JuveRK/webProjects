@@ -2,11 +2,10 @@
 	min-height: 60px;
 	margin-top: 15px;
 	margin-bottom: 0px;
-	padding-top: 20px;
 	background: url(banner.png);
 	background-repeat: no-repeat;
 }
-.nav-collapse.in {
+.navbar-collapse.in {
 	background-color: #CC5B00
 }
 .navbar-toggle {
@@ -14,13 +13,13 @@
 }
 .in>ul {
 	background-color: #CC5B00;
-	margin-top: 20px;
 }
-.navbar-nav li a {
+
+.navbar-default .navbar-nav>li>a {
 	font-family: 'Ubuntu', sans-serif;
 	height: 30px;
 	font-size: 1.2em;
-	margin-top: 5px;
+	margin-top: 25px;
 	margin-left: 25px;
 	margin-right: 0px;
 	padding: 2px;
@@ -31,25 +30,24 @@
 	background-color: transparent;
 	vertical-align: middle;
 }
-.navbar-nav li a:hover, .navbar-nav li a:focus {
+.navbar-default .navbar-nav>li>a:hover,.navbar-default  .navbar-nav>li>a:focus {
 	background-color: transparent;
 	color: white;
 }
-.navbar-nav > .active > a, .navbar-nav > .active > a:hover,.navbar-nav > .active > a:focus{
+.navbar-default .navbar-nav > .active > a, .navbar-default  .navbar-nav > .active > a:hover,.navbar-default  .navbar-nav > .active > a:focus{
 	background-color: transparent;
 	color: black;
 }
 
-.navbar-brand {
-	max-width: 106px;
+.navbar-default .navbar-brand {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	color: white;
-	padding: 0px;
-	margin-left: 5px
+	padding-top:20px;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus {
 	color: white;
 }
 
@@ -60,8 +58,12 @@
 .dropdown-menu {
 	background-color: #CC5B00;
 }
-.dropdown-menu>li>a {
+.dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
 	margin-left: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
 	font-size: 1em;
 }
 .dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {
@@ -88,7 +90,8 @@
 	border-radius: 2px;
 	margin-top:10px;
 	margin-bottom:10px;
-		box-shadow: 2px 2px 1px 0px black
+	padding: 5px;
+	box-shadow: 2px 2px 1px 0px black
 }
 #carFade {
 	position: absolute;
@@ -97,7 +100,8 @@
 	height: 80px;
 	z-index: 5;
 	background: -moz-radial-gradient(bottom center, ellipse cover,  rgba(20,20,20,1) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-	
+	background: -webkit-gradient(radial, bottom center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,1)), color-stop(65%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(bottom center, ellipse cover, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 65%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
 }
 .item a img {
 	height:400px;
@@ -108,7 +112,11 @@
 	z-index: 10;
 }
 .carousel-caption {
-	text-shadow: 1px 1px 4px black;
+	text-shadow:
+		-1px -1px 4px black,
+		1px -1px 4px black,
+		-1px 1px 4px black,
+		1px 1px 4px black;
 	font-size: 1.5em
 }
 .carousel-indicators>li{
@@ -139,6 +147,9 @@
 
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Ubuntu', sans-serif;
+}
+h2 {
+	margin-top: 10px
 }
 #bio>a:link, #bio>a:hover {
 	color: #ddd;
