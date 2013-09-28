@@ -9,7 +9,7 @@
     <title>2-Bit Coder - Ryan Juve</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
 
@@ -19,25 +19,31 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fixed-top">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand">2-Bit Coder</a>
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a id="homeNav" href="#">Home</a></li>
-            <li class="dropdown">
-              <a id="projectNav" href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="wanderlustDance/index.html">Wanderlust Dance</a></li>
-                <li><a href="http://juverk.github.io/bootstrap-tac-toe/">Bootstrap-Tac-Toe</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
+      </div>
+
+      <div class="collapse navbar-collapse nav-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="wanderlustDance/index.html">Wanderlust Dance</a></li>
+              <li><a href="http://juverk.github.io/bootstrap-tac-toe/">Bootstrap-Tac-Toe</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+
     </div>
 
     <div class="container">
@@ -83,7 +89,7 @@
         </div>
     </div>
     <hr><br>
-      <div class="row hidden-sm">
+      <div class="row hidden-xs ">
         <div class="col-sm-3 col-lg-3" id="bio">
           <img src="headshot.jpg" class="img-responsive">
           <h3>Ryan Juve</h3>
@@ -97,12 +103,12 @@
           "I'm an amateur coder and lover of all things nerdy.  I'm also a big fan of psychology, neuroscience, and the rapidly advancing field of brain-computer interfaces.  I believe the internet and the ways we interact with it are going to be powerful influences on the future of the planet, and I look forward to being a part of it."
           </em></p>
         </div>
-        <div class="col-sm-9 col-lg-9" id="postBox" >
+        <div class="col-sm-9 col-md-9 col-lg-9" id="postBox" >
           <div class="row">
             <div class="col-12 post">
             <h2>Latest Project: Wanderlust Dance</h2>
             <h6 class="text-muted">Posted September 26, 2013</h6>
-            <p>This is the initial posting of my latest project: <a href="wanderlustDance/index.html">a professional dance website for my girlfriend.</a>  The site is built with <a href="emberjs.com">Ember.js</a> so that blog posts and shows can be added to their respective JSON arrays and the site will automatically be updated.  It also features an Ember.js helper that creates Google Maps iframes from just an address and place name.  Currently the site is using ember-data to store the models, but I am working on building a backend for data persistence using <a href="http://code.google.com/p/jsonengine/">jsonengine</a>.</p>
+            <p>This is the initial posting of my latest project: <a href="wanderlustDance/index.html">a professional dance website for my girlfriend.</a>  The site is built with <a href="http://emberjs.com">Ember.js</a> so that blog posts and shows can be added to their respective JSON arrays and the site will automatically be updated.  It also features an Ember.js helper that creates Google Maps iframes from just an address and place name.  Currently the site is using ember-data to store the models, but I am working on building a backend for data persistence using <a href="http://code.google.com/p/jsonengine/">jsonengine</a>.</p>
             <h5>todo for Wanderlust Dance:</h5>
             <ul>
               <li>Finish contact page</li>
@@ -126,44 +132,47 @@
           </div>
         </div>
       </div>
-      <div class="row visible-sm">
+      <div class="row visible-xs">
        <div class="col-12 post">
-            <h2>Latest Project: Wanderlust Dance</h2>
-            <h6 class="text-muted">Posted September 26, 2013</h6>
-            <p>This is the initial posting of my latest project: <a href="wanderlustDance/index.html">a professional dance website for my girlfriend.</a>  The site is built with <a href="emberjs.com">Ember.js</a> so that blog posts and shows can be added to their respective JSON arrays and the site will automatically be updated.  It also features an Ember.js helper that creates Google Maps iframes from just an address and place name, and (hopefully!) responsive design.  Currently the site is using ember-data to store the models, but I am working on building a backend for data persistence using <a href="http://code.google.com/p/jsonengine/">jsonengine</a>.</p>
-            <h5>todo for Wanderlust Dance:</h5>
-            <ul>
-              <li>Finish contact page</li>
-              <li>Finish customizing jsonengine for my particular data persistence needs</li>
-              <li>Rewrite Ember app to use jsonengine</li>
-              <li>Build ember.js Admin app for managing blog posts and the show list, this will be deployed on Google's App Engine alongside jsonengine</li>
-              <li>Find photo gallery storage solution, integrate with Admin app</li>
-            </ul>
-            <p>Eventually I'd like to write node.js and LAMP stack backends for this site as well, but I think jsonengine will be enough to run this site until it gets more traffic.  As always comments are highly appreciated, just shoot me an email.</p>
-            </div>
+          <h2>Latest Project: Wanderlust Dance</h2>
+          <h6 class="text-muted">Posted September 26, 2013</h6>
+          <p>This is the initial posting of my latest project: <a href="wanderlustDance/index.html">a professional dance website for my girlfriend.</a>  The site is built with <a href="emberjs.com">Ember.js</a> so that blog posts and shows can be added to their respective JSON arrays and the site will automatically be updated.  It also features an Ember.js helper that creates Google Maps iframes from just an address and place name, and (hopefully!) responsive design.  Currently the site is using ember-data to store the models, but I am working on building a backend for data persistence using <a href="http://code.google.com/p/jsonengine/">jsonengine</a>.</p>
+          <h5>todo for Wanderlust Dance:</h5>
+          <ul>
+            <li>Finish contact page</li>
+            <li>Finish customizing jsonengine for my particular data persistence needs</li>
+            <li>Rewrite Ember app to use jsonengine</li>
+            <li>Build ember.js Admin app for managing blog posts and the show list, this will be deployed on Google's App Engine alongside jsonengine</li>
+            <li>Find photo gallery storage solution, integrate with Admin app</li>
+          </ul>
+          <p>Eventually I'd like to write node.js and LAMP stack backends for this site as well, but I think jsonengine will be enough to run this site until it gets more traffic.  As always comments are highly appreciated, just shoot me an email.</p>
+        </div>
+
         <div class="col-12 post">
           <h2>Bootstrap-Tac-Toe is a go</h2>
           <h6 class="text-muted">Posted September 6, 2013</h6>
           <p>A somewhat final verison of my Bootstrap-tac-toe game is up on my <a href="http://github.com/JuveRK/webProjects/tree/master/bootstraptactoe">GitHub</a>, and live at <a href="http://juverk.github.io/bootstrap-tac-toe/">juverk.github.io/bootstrap-tac-toe/</a>.  Take a look and email me any comments you might have.</p>
-        </div>       
+        </div>   
+
         <div class="col-12 post">
           <h2>First commit - Here goes!</h2>
           <h6 class="text-muted">Posted: August 22, 2013</h6>
           <p>Hey there friends, family, and random internet passersby, welcome to my little piece of the internet.  I'll be using this as a place to display my web and coding projects, as well as share errata from the internet.  So please check out my projects and feel free to leave me a bit of feedback.</p>
-        </div>  
-        <div class="col-12" id="bio">
+        </div>
+
+        <div class="col-xs-12" id="bio">
           <div class="row">
-            <div class="col-5">
+            <div class="col-xs-5">
               <img src="headshot.jpg" class="img-responsive">
-            </div>
-            <div class="col-7">
               <h3>Ryan Juve</h3>
               <a href="mailto:RKJuve@gmail.com">RKJuve@Gmail.com</a><br>
                <h5 style="display:inline">Resume: </h5><a href="RyanJuve-resume.pdf">.pdf</a><br>
               <a href="http://www.linkedin.com/pub/ryan-juve/71/80b/a49" >      
               <img src="http://www.linkedin.com/img/webpromo/btn_viewmy_120x33.png" width="120" height="33" border="0" alt="View Ryan Juve's profile on LinkedIn"style="margin: 5px 0px 5px 3px">
               </a>
-              <a href="https://github.com/JuveRK?tab=repositories"><img src="gitBanner.png"style="margin: 5px 0px 5px 3px"/></a><hr style="margin: 5px">
+              <a href="https://github.com/JuveRK?tab=repositories"><img src="gitBanner.png"style="margin: 5px 0px 5px 3px"/></a>
+            </div>
+            <div class="col-xs-7">
               <p><em>
               "I'm an amateur coder and lover of all things nerdy.  I'm also a big fan of psychology, neuroscience, and the rapidly advancing field of brain-computer interfaces.  I believe the internet and the ways we interact with it are going to be powerful influences on the future of the planet, and I look forward to being a part of it."
               </em></p>
@@ -182,7 +191,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $('.carousel').carousel({
       interval: 7000
