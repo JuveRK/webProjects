@@ -65,29 +65,31 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
 	<link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
-</head>
 
+
+
+</head>
 <body>
 	<script type="text/x-handlebars">
-	<div class="navbar navbar-fixed-top">
-		<div class="container">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#"><img src="WLDsmall.png" class="image-responsive"/></a>
-			<div class="nav-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li>{{#linkTo 'index'}}Home{{/linkTo}}</li>
-					<li>{{#linkTo 'gallery'}}Gallery{{/linkTo}}</li>
-					<li>{{#linkTo 'shows'}}Upcoming Shows{{/linkTo}}</li>
-					<li>{{#linkTo 'contact'}}Contact{{/linkTo}}</li>
-				</ul>
-			</div><!--/.nav-collapse -->
+		<div class="navbar navbar-fixed-top">
+			<div class="container">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="WLDsmall.png" class="image-responsive"/></a>
+				<div class="nav-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>{{#linkTo 'index'}}Home{{/linkTo}}</li>
+						<li>{{#linkTo 'gallery'}}Gallery{{/linkTo}}</li>
+						<li>{{#linkTo 'shows'}}Upcoming Shows{{/linkTo}}</li>
+						<li>{{#linkTo 'contact'}}Contact{{/linkTo}}</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
 		</div>
-	</div>
-	{{outlet}}
+		{{outlet}}
 	</script>
 
 	<script type="text/x-handlebars" id="shows">
@@ -125,7 +127,7 @@
 
 	<script type="text/x-handlebars" id="index">
 
-  	<div class="container">
+  		<div class="container">
 
   		<div class="jumbotron">
   			<img src="http://www.adventured.com/wp-content/uploads/hike1.jpeg" id="fade1" class="img-responsive"/>
@@ -302,9 +304,9 @@
 			</div>
 		</div>
 		<hr>
-    <footer>
-      <p><small>&copy; Ryan Juve 2013</small></p>
-    </footer>
+	    <footer>
+	      <p><small>&copy; Ryan Juve 2013</small></p>
+	    </footer>
 		</div> <!-- /container --> 
 	</script>
 
@@ -316,14 +318,12 @@
 				</div>
 			</div>
 			<hr>
-      <footer>
-        <p><small>&copy; Ryan Juve 2013</small></p>
-      </footer>
-      </div>
+	      <footer>
+	        <p><small>&copy; Ryan Juve 2013</small></p>
+	      </footer>
+	      </div>
 	</script>
-		<!-- Le javascript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
+<!-- javascript placed at the end of the document so the pages load faster -->
 
 		<script src="jquery-1.9.1.js"></script>
 		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
@@ -332,5 +332,12 @@
 		<script type="text/javascript" src="ember-data.js"></script>
 		<script type="text/javascript" src="moment.js"></script>
  		<script type="text/javascript" src="calendar.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$.get("http://jsonwander.appspot.com/_je/embertest3?sort=_createdAt.asc", function(data){
+			console.log(data);
+		});
+	});
+	</script>
 	</body>
 </html>
