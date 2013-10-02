@@ -335,8 +335,9 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 		$.get("http://jsonwander.appspot.com/_je/embertest3?sort=_createdAt.asc", function(data){
+			console.log('test');
 			console.log(data);
-		});
+		}, "http");
 	});
 	</script>
 	</body>
