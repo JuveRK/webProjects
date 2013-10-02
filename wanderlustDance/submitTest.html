@@ -16,7 +16,7 @@ function post(msg) {
   // disable the buttons and clear the text field
   disableButton(true);
   $("#msgTxt").val("");
-  
+  var date = new Date();
   // post a message
   $.post("http://jsonwander.appspot.com/_je/embertest3", { content: msg, postedTime: date, submitter: "ryan juve", title: "test post" }, function (result){	
     query(null);
@@ -32,7 +32,7 @@ function query(keyword) {
   else params = { sort: "_createdAt.desc", limit: 100};
   
   // query for the messages
-  $.get("http://jsonwander.appspot.com/_je/test2", params, function (result) {
+  $.get("http://jsonwander.appspot.com/_je/embertest3", params, function (result) {
     $("#messages").empty();
     for (i = 0; i < result.length; i++) {
       var msg = $("<div/>").text("(" + getUserName(result[i]) + ") " + result[i].messageBody_);
