@@ -18,7 +18,7 @@ function post(msg) {
   $("#msgTxt").val("");
   var date = new Date();
   // post a message
-  $.post("http://jsonwander.appspot.com/_je/embertest3", { content: msg, postedTime: date, submitter: "ryan juve", title: "test post" }, function (result){	
+  $.post("http://jsonwander.appspot.com/_je/BlogPosts", {id: 2, content: "lorem ipsum", submitter: "ryan juve", title: "test post #2" }, function (result){	
     query(null);
   }, "text");
 }

@@ -1,0 +1,232 @@
+body {
+	padding-top: 90px;
+	padding-bottom:20px;
+	background-color:#191919;
+	box-shadow: 0 0 50px #000 inset;
+	/*background:url("seamless/fzm-canvas.texture-03-[800x791].jpg");*/
+}
+h3, h4 {
+	font-family: 'Special Elite'
+}
+
+.jumbotron {
+	position: relative;
+	display: block;
+	padding: 0px;
+  	margin-top: 0px;
+	height:400px;
+	background: black;
+	border: 2px solid black;
+	box-shadow: 0px 0px 8px 0px black;
+	overflow: hidden;
+	z-index: -1;
+}
+
+@media screen and (max-width : 480px) {
+	.jumbotron {
+		height:200px;
+	}
+}
+
+#fade1 {
+	width: 100%;
+	z-index: -1;
+	position:absolute;
+	display: block;
+	opacity: 1;
+	  /*-webkit-transition: opacity 1s ease-in-out;
+	  -moz-transition: opacity 1s ease-in-out;
+	  -o-transition: opacity 1s ease-in-out;
+	  transition: opacity 1s ease-in-out;*/
+}
+
+#fade2, #fade3 {
+	width: 100%;
+	z-index: -1;
+	position:absolute;
+	display: block;
+	opacity: 0;
+	  /*-webkit-transition: opacity 1s ease-in-out;
+	  -moz-transition: opacity 1s ease-in-out;
+	  -o-transition: opacity 1s ease-in-out;
+	  transition: opacity 1s ease-in-out;*/
+	  }
+.navbar {
+	height: 70px;
+	background-color: transparent;
+	background-image:url("mapBar.jpg");
+	background-position:center;
+	box-shadow: 0px 0px 60px 10px black inset;
+}
+
+.navbar-brand {
+	padding-left: 0px;
+}
+
+.nav-collapse {
+	background: black;
+}
+
+.navbar-toggle:focus {
+	background: transparent;
+}
+.nav-collapse ul li:first-child {
+	margin-left: 0px;
+}
+.navbar-nav li {
+}
+
+.navbar-nav li .active {
+	/* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-nav li a {
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 1.2em;
+	font-family: 'Special Elite';
+	color: white;
+	margin-top: 15px;
+	margin-left: 10px;
+	padding:11px;
+    box-shadow: 0px 0px 15px #000;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.navbar-nav li a:focus {
+	 /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+
+}
+.navbar-nav li a:hover {
+	background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+}
+
+.navbar-nav li:first-child {
+	margin-left: 25px;
+}
+
+.navbar-brand, .navbar-nav li a {
+}
+
+.tab-pane div {
+	margin-top: 30px;
+}
+
+#bioCard {
+	background: #E9E3DC;
+	padding: 15px;
+	border-radius: 5px;
+}
+#blogBox {
+	width: 73%;
+	background: #E9E3DC;
+	border-radius: 5px;
+	padding-top:15px;
+	margin-left: 20px;
+	margin-right: -2%;
+	box-shadow: 5px 5px 10px black;
+}
+
+.blogPost hr {
+	border-color: black;
+}
+.blogPost p {
+	margin-top: 20px;
+	text-indent: 20px;
+}
+.blogPost h3, .blogPost h5 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 70px;
+}
+.show {
+	width: 80%;
+	margin-left: 3%;
+	background-color:#E9E3DC;
+	border-radius: 5px;
+	box-shadow: 3px 3px 15px black;
+}
+#showsbox{
+	background: #E9E3DC;
+}
+#showsbox h3 {
+	color: black;
+	margin-bottom: 2px;
+}
+#showsbox ul {
+	padding-left: 0px;
+}
+#showsbox hr {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-color: black;
+}
+.tbl {
+	color: white;
+	background-color: #204B4B;
+	border-radius: 5px;
+	box-shadow: 3px 3px 15px black;
+}
+td a {
+	color:black;
+}
+
+
+.iframe-rwd  {
+position: relative;
+padding-bottom: 65.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+.iframe-rwd iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+/* GALLERY */
+
+/*.box:before, .box:after
+{
+	margin-top: 50px;
+	position: absolute;
+	width: 40%;
+	height: 10px;
+	content: ' ';
+	left: 12px;
+	bottom: 12px;
+	background: transparent;
+	-webkit-transform: skew(-5deg) rotate(-5deg);
+	-moz-transform: skew(-5deg) rotate(-5deg);
+	-ms-transform: skew(-5deg) rotate(-5deg);
+	-o-transform: skew(-5deg) rotate(-5deg);
+	transform: skew(-5deg) rotate(-5deg);
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3);
+	z-index: 1;
+} 
+
+.box:after
+{
+	left: auto;
+	right: 12px;
+	-webkit-transform: skew(5deg) rotate(5deg);
+	-moz-transform: skew(5deg) rotate(5deg);
+	-ms-transform: skew(5deg) rotate(5deg);
+	-o-transform: skew(5deg) rotate(5deg);
+	transform: skew(5deg) rotate(5deg);
+}*/

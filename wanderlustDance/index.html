@@ -326,6 +326,7 @@
 <!-- javascript placed at the end of the document so the pages load faster -->
 
 		<script src="jquery-1.9.1.js"></script>
+		<script src="jquery.jsonp_2.4.0.js"></script>
 		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="handlebars-1.0.0.js"></script>
 		<script type="text/javascript" src="ember-1.0.0-rc.7.js"></script>
@@ -333,11 +334,31 @@
 		<script type="text/javascript" src="moment.js"></script>
  		<script type="text/javascript" src="calendar.js"></script>
 	<script type="text/javascript">
+	var callback = function(data){
+		console.log("callback");
+		console.log(data);
+	};
 	$(document).ready(function(){
-		$.get("http://jsonwander.appspot.com/_je/embertest3?sort=_createdAt.asc", function(data){
+		$.jsonp({
+			url: "http://jsonwander.appspot.com/_je/embertest3",
+			complete: function(opts, tstat){
+				console.log(opts);
+				console.log("complete"+tstat);
+			},
+			error: function(opts, tstat){
+				console.log(opts);
+				console.log("error"+tstat);
+			},
+			callback: "callback",
+			dataFilter: function(data){
 			console.log('test');
 			console.log(data);
-		}, "jsonp");
+			},
+			success: function(data){
+			console.log('test');
+			console.log(data);
+			},
+		});			
 	});
 	</script>
 	</body>
